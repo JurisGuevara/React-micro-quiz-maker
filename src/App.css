@@ -9,7 +9,7 @@
 
 .App {
   width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
 }
 
 h1 {
@@ -19,4 +19,80 @@ h1 {
   border-bottom: 1px solid #333333;
   padding: 24px 0 12px;
   text-align: center;
+}
+
+h2 {
+  margin: 24px;
+}
+
+.select {
+  margin: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+
+.select li {
+  background-color: rgba(222, 211, 230, 0.3);
+  height: 172px;
+  width: auto;
+  padding: 18px 24px 24px;
+}
+
+.select li:hover {
+  cursor: pointer;
+  background-color: rgba(222, 211, 230, 0.6);
+}
+
+.select li p {
+  margin-bottom: 8px;
+}
+
+.select .thumb {
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+}
+
+.select .thumb img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.mode {
+  margin: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+
+.mode li {
+  text-align: center;
+  padding: 24px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.mode li:nth-child(1) {
+  background-color: rgba(125, 228, 94, 0.3);
+}
+
+.mode li:nth-child(1):hover {
+  background-color: rgba(125, 228, 94, 0.7);
+}
+
+.mode li:nth-child(2) {
+  background-color: rgba(228, 181, 94, 0.3);
+}
+
+.mode li:nth-child(2):hover {
+  background-color: rgba(228, 181, 94, 0.7);
+}
+
+.mode li:nth-child(3) {
+  background-color: rgba(228, 94, 94, 0.3);
+}
+
+.mode li:nth-child(3):hover {
+  background-color: rgba(228, 94, 94, 0.7);
 }
