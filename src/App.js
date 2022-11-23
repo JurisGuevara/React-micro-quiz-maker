@@ -7,21 +7,19 @@ import Select from './components/Select';
 
 function App() {
   const [tab, setTab] = useState('select')
-  let categoryPath = ''
-  let modePath = ''
+  const [categoryPath, setCategoryPath] = useState('')
+  const [modePath, setModePath] = useState('')
 
   const changeTab = (tabName) => {
     setTab(tabName)
   }
 
   const setCategory = (category) => {
-    categoryPath += category
-    console.log(categoryPath)
+    setCategoryPath(category)
   }
 
   const setMode = (mode) => {
-    modePath += mode
-    console.log(modePath)
+    setModePath(mode)
   }
 
   return (
@@ -39,6 +37,8 @@ function App() {
       {tab === 'quiz' ?
         <Quiz title="New Quiz Title"
         changeTab={changeTab}
+        categoryPath={categoryPath}
+        modePath={modePath}
       /> : null}
       {tab === 'score' ?
         <Score title="Your Score"
