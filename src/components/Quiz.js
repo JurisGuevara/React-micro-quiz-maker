@@ -6,11 +6,17 @@ const Quiz = ({title, categoryPath, modePath}) => {
   return (
     <div className="container">
       <h1>{title}</h1>
-      {data && <ul>
+      {data &&
+      <ol className="quiz">
         {data.map(question =>
-          <li key={question.id}>{question.question}</li>
+          <li className="item" key={question.id}>
+            <p className="question">{question.question}</p>
+            <ol className="answers">
+              
+            </ol>
+          </li>
         )}
-      </ul>}
+      </ol>}
     </div>
   );
 }

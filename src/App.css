@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style-type: none;
   color: #333333;
   font-family: MainFont, 'Trebuchet MS', Helvetica, sans-serif;
 }
@@ -30,6 +29,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 24px;
+  list-style-type: none;
 }
 
 .select li {
@@ -64,6 +64,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 24px;
+  list-style-type: none;
 }
 
 .mode li {
@@ -95,4 +96,20 @@ h2 {
 
 .mode li:nth-child(3):hover {
   background-color: rgba(228, 94, 94, 0.7);
+}
+
+.quiz .item {
+  margin: 24px 24px 24px 72px;
+}
+
+.quiz .question {
+  /* margin-bottom: 12px; */
+}
+
+.quiz .answers {
+  list-style-type: none;
+}
+
+.quiz .answers li {
+  margin: 12px 24px;
 }
