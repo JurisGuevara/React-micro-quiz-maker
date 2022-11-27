@@ -8,7 +8,7 @@
 
 .App {
   width: 900px;
-  margin: 0 auto 80px;
+  margin: 0 auto 160px;
 }
 
 h1 {
@@ -72,6 +72,7 @@ h2 {
   padding: 24px;
   cursor: pointer;
   font-size: 18px;
+  border-radius: 4px;
 }
 
 .mode li:nth-child(1) {
@@ -112,4 +113,29 @@ h2 {
 
 .quiz .answers li {
   margin: 12px 24px;
+}
+
+.quiz .answers label {
+  margin-left: 4px;
+}
+
+.submit {
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.submit button {
+  padding: 12px 32px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.submit button:hover {
+  cursor: pointer;
 }
