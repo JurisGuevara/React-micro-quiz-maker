@@ -52,14 +52,16 @@ const Quiz = ({title, categoryPath, modePath}) => {
 
     x.forEach(element => {
       if(element.checked) {
-        y.push(element.value)
+        y.push(element)
       }
     });
 
     y.forEach((element, i) => {
-      if(element === correctAnswers[i]) {
+      if(element.value === correctAnswers[i]) {
+        element.parentNode.classList.add('yes-point')
         console.log(element, "tama")
       } else {
+        element.parentNode.classList.add('no-point')
         console.log(element, "mali")
       }
     })

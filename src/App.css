@@ -113,9 +113,9 @@ h2 {
 
 .quiz .answers li {
   margin: 6px 0;
-  padding: 3px;
+  padding: 3px 6px 3px;
   cursor: default;
-  width:fit-content;
+  width: max-content;
 }
 
 .quiz .answers input {
@@ -145,4 +145,16 @@ h2 {
 
 .submit button:hover {
   cursor: pointer;
+}
+
+.correct {
+  background-color: rgb(184, 255, 184);
+}
+
+.yes-point {
+  background-color: rgb(76, 241, 76);
+}
+
+.no-point {
+  background-color: rgb(255, 177, 177);
 }
