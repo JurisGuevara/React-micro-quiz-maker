@@ -104,7 +104,7 @@ h2 {
 }
 
 .quiz .question {
-  /* margin-bottom: 12px; */
+  margin-bottom: 6px;
 }
 
 .quiz .answers {
@@ -112,11 +112,18 @@ h2 {
 }
 
 .quiz .answers li {
-  margin: 12px 24px;
+  margin: 6px 0;
+  padding: 3px;
+  cursor: default;
+  width:fit-content;
 }
 
-.quiz .answers label {
-  margin-left: 4px;
+.quiz .answers input {
+  margin-right: 6px;
+}
+
+.quiz .answer {
+  pointer-events: none;
 }
 
 .submit {

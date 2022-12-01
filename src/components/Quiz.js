@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import useFetch from "../customHooks/useFetch";
 
 const Quiz = ({title, categoryPath, modePath}) => {
@@ -17,6 +18,11 @@ const Quiz = ({title, categoryPath, modePath}) => {
   const {data, isPending, error} = useFetch(`https://the-trivia-api.com/api/questions?categories=${categoryPath}&limit=${setMode()}&difficulty=${modePath}`)
   let correctAnswers = []
 
+  const setAnswer = (e) => {
+    e.target.firstElementChild.checked = true
+    console.log(e.target.firstElementChild.value)
+  }
+
   const shuffleAnswers = (correct, aIncorrect, id) => {
     let answers = [correct]
     correctAnswers.push(correct)
@@ -27,11 +33,36 @@ const Quiz = ({title, categoryPath, modePath}) => {
     .sort((a, b) => a.sort - b.sort)
     .map(({value}) => value)
 
-    return shuffled.map(sItem =>
-    <li key={sItem}>
-      <input type="radio" name={id} value={sItem} />
-      <label>{sItem}</label><br />
-    </li>)
+    return <Fragment>
+      {shuffled.map(sItem =>
+        <li onClick={(e) => setAnswer(e)} key={sItem}>
+          <input className="answer" onClick={(e) => e.stopPropagation} type="radio" name={id} value={sItem} />
+          {sItem}
+        </li>)}
+        <li onClick={(e) => setAnswer(e)}>
+        <input className="answer" onClick={(e) => e.stopPropagation} type="radio" name={id} value="none" defaultChecked />
+          I don't know
+        </li>
+    </Fragment>
+  }
+
+  const submitQuiz = () => {
+    let x = document.querySelectorAll('.answer')
+    let y = []
+
+    x.forEach(element => {
+      if(element.checked) {
+        y.push(element.value)
+      }
+    });
+
+    y.forEach((element, i) => {
+      if(element === correctAnswers[i]) {
+        console.log(element, "tama")
+      } else {
+        console.log(element, "mali")
+      }
+    })
   }
 
   return (
@@ -53,7 +84,7 @@ const Quiz = ({title, categoryPath, modePath}) => {
         </ol>
         <div className="submit">
           <h2>Submit Quiz?</h2>
-          <button>Yes</button>
+          <button onClick={submitQuiz}>Yes</button>
         </div>
       </>}
     </div>
