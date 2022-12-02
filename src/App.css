@@ -112,7 +112,7 @@ h2 {
 }
 
 .quiz .answers li {
-  margin: 6px 0;
+  margin: 6px 0 0 24px;
   padding: 3px 6px 3px;
   cursor: default;
   width: max-content;
@@ -155,6 +155,40 @@ h2 {
   background-color: rgb(76, 241, 76);
 }
 
+.yes-point::before {
+  content: '';
+  background-image: url('../src/img/check.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-color: unset;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: -10px;
+}
+
 .no-point {
   background-color: rgb(255, 177, 177);
+}
+
+.no-point::before {
+  content: '';
+  background-image: url('../src/img/cross.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-color: unset;
+  position: absolute;
+  margin-left: -36px;
+  margin-top: -2px;
+}
+
+.disable-radio {
+  pointer-events: none;
 }
