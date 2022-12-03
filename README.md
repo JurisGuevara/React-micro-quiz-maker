@@ -1,3 +1,11 @@
+# Micro Quiz Maker created with React
+
+Libraries used:
+ - React v18
+
+Public API used:
+ - The Trivia API (https://the-trivia-api.com/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
